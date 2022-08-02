@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books
 
 > Here we've built a javascript application to save our favorite books to a list created dynamically through javascript.
 

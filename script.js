@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const bookAuthor = authorInput.value;
       if (localStorage.getItem('book') === null) {
         const booksArray = [];
-        booksArray.push([bookTitle, bookAuthor]);
+        booksArray.push({ title: bookTitle, author: bookAuthor });
         localStorage.setItem('book', JSON.stringify(booksArray));
       } else {
         const booksArrayStr = localStorage.getItem('book');
