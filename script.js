@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const BookData = document.querySelector('#books');
 const button = document.querySelector('#btn');
 const titleInput = document.querySelector('#title');
@@ -15,20 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const booksArrayStr = localStorage.getItem('book');
       booksArray = JSON.parse(booksArrayStr);
     }
-    booksArray.map((data, index) => { 
+    booksArray.map((data, index) => {
       str += `
               <p>${data[0]}</p>
               <p>${data[1]}</p>
               <button onclick='remove(${index})'>Remove</button>
               <hr>
           `;
-    
+
       return (data);
     });
     BookData.innerHTML = str;
   };
 
-  button.addEventListener('click', function () {
+  button.addEventListener('click', () => {
     if (titleInput.value === '' && authorInput.value === '') {
       alert('Please enter a title and author');
     } else {
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         booksArray.push([bookTitle, bookAuthor]);
         localStorage.setItem('book', JSON.stringify(booksArray));
       } else {
-        let booksArrayStr = localStorage.getItem('book');
+        const booksArrayStr = localStorage.getItem('book');
         booksArray = JSON.parse(booksArrayStr);
         booksArray.push([bookTitle, bookAuthor]);
         localStorage.setItem('book', JSON.stringify(booksArray));
@@ -50,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
       BookData.innerHTML = str;
       showData();
     }
-    });
+  });
 
   remove = (id) => {
-    let booksArrayStr = localStorage.getItem('book');
+    const booksArrayStr = localStorage.getItem('book');
     booksArray = JSON.parse(booksArrayStr);
     booksArray.splice(id, 1);
     localStorage.setItem('book', JSON.stringify(booksArray));
