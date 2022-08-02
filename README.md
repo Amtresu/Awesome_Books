@@ -9,7 +9,6 @@
 
 - HTML, Javascript
 
-
 ## Live Demo (if available)
 
 Deployment coming soon
@@ -19,25 +18,23 @@ Deployment coming soon
 
 To get a local copy up and running follow these simple example steps.
 
+- git clone git@github.com:Amtresu/Awesome_Books.git
+
+- cd Awesome_Books
+
 ### Prerequisites
 Functioning computer and internet 
-### Setup
 
 ### Install
 Text editor (I recommend VS Code)
-### Usage
-Debugging, etc.
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
 
 👤 **Kwaleyela Musilizo Ikafa**
 
 - GitHub: [@Kwaleyela-Ikafa](https://github.com/Kwaleyela-Ikafa)
+- Twitter: [@mvrck383](https://twitter.com/mvrck383)
+- LinkedIn: [LinkedIn](https://zm.linkedin.com/in/kwaleyela-musilizo-ikafa-abaa1a20b?trk=people-guest_people_search-card)
 
 
 👤 **Conor Follette**
@@ -49,17 +46,17 @@ Debugging, etc.
 
 Contributions, issues, and feature requests are welcome!
 
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b 'branchname`)
+3. Commit your Changes (`git commit -m 'Add some branchname'`)
+4. Push to the Branch (`git push origin branchname`)
+5. Open a Pull Request
+
 Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
