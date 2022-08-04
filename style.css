@@ -83,7 +83,6 @@ a {
   height: 30px;
   border: 2px solid;
   border-radius: 6px;
-  height: 30px;
 }
 
 #author {
@@ -151,7 +150,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 0;
   }
 
   .remove {
