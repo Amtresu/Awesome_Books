@@ -50,7 +50,7 @@ UI.prototype.addBookToUI = function (newBook) {
           <li class='book'>
           <div class ='info'>
             <p class='book-title'>${newBook.title}</p>
-            <p class='book-author'>by ${newBook.author}</p>
+            <p class='book-author'>&nbsp by ${newBook.author}</p>
           </div>
             <button class='remove remove-btn btn' type='button'>Remove</button>
           </li>
@@ -60,7 +60,7 @@ UI.prototype.addBookToUI = function (newBook) {
           <li class='book'>
           <div class ='info'>
             <p class='book-title'>${newBook.title}</p>
-            <p class='book-author'>by ${newBook.author}</p>
+            <p class='book-author'>&nbsp by ${newBook.author}</p>
           </div>
             <button class='remove remove-btn btn' type='button'>Remove</button>
           </li>

@@ -1,8 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Merriweather';
-
+  font-family: "Merriweather";
 }
 
 * {
@@ -14,13 +13,13 @@ ul {
   list-style: none;
 }
 
-.books-container{
+.books-container {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.remove{
+.remove {
   margin-right: 5%;
   height: 2em;
   border-radius: 6px;
@@ -28,16 +27,14 @@ ul {
   border-style: none;
   color: #fff;
   padding: 5px;
-
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
-
 }
 
-#title{
+#title {
   width: 300px;
   height: 30px;
   border: 2px solid;
@@ -45,16 +42,15 @@ ul {
   height: 30px;
 }
 
-#author{
+#author {
   width: 300px;
   height: 30px;
   border: 2px solid;
   border-radius: 6px;
   margin-top: 10px;
-
 }
 
-#add-button{
+#add-button {
   height: 2em;
   width: 50px;
   border-radius: 6px;
@@ -70,8 +66,8 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 500px;
-  padding-top: 1rem!important;
-  padding-bottom: 1rem!important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
   border: 1px solid;
 }
 
@@ -96,28 +92,6 @@ ul {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-/* @media only screen and (max-width: 769px){
-  .books-container{
-    display: flex; 
-    flex-direction: column;
-}
-
-.book-item{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0px;
-}
-
-.remove{
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-
-} */
-
-
-
