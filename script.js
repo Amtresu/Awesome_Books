@@ -4,11 +4,12 @@ class Book {
   this.author = author
   this.booksArray = []
   this.BookData = document.querySelector('#books');
-  this.button = document.querySelector('#btn');
+  this.button = document.querySelector('#add-button');
   this.titleInput = document.querySelector('#title');
   this.authorInput = document.querySelector('#author');
   this.sectionInput = document.querySelector('#books');
-  this.removeButton = document.querySelector('.remove')
+  this.removeButton = document.querySelector('.remove');
+  this.ul = document.querySelector('.booksList')
   }
 
   addBook() {
@@ -19,17 +20,18 @@ class Book {
       this.booksArray.push({ titleValue, authorValue });
       localStorage.setItem('book', JSON.stringify(this.booksArray));
       this.sectionInput.innerHTML += `
-      <p>${titleValue}</p>
+      <li class="book-item">
+      <p  class="book-title">"${titleValue}"</p>
       <p>${authorValue}</p>
-      <button onclick='remove(${titleValue})'>Remove</button>
-      <hr>
-                   `;
+      <button class="remove" onclick='remove(${titleValue})'>Remove</button>
+      </li> `;
     });
   }
+
 }
 
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const book = new Book(title, author);
-book.addBook();
-book.storedData();
+book.addBook();  
+
