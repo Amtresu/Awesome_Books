@@ -5,33 +5,33 @@ const authorInput = document.querySelector('#author');
 
 class Storage {
   constructor() {
-    this.collection = [];
+    this.Books = [];
   }
 
-  static addCollection(newBook) {
-    this.collection.push(newBook);
-    localStorage.setItem('collection', JSON.stringify(this.collection));
+  static addBook(newBook) {
+    this.Books.push(newBook);
+    localStorage.setItem('Books', JSON.stringify(this.Books));
   }
 
-  static removeFromCollection(target) {
+  static removeFromBooks(target) {
     const removeBook = target.previousElementSibling.firstElementChild.textContent;
 
-    this.collection.filter((book, index) => {
+    this.Books.filter((book, index) => {
       if (book.title === removeBook) {
-        this.collection.splice(index, 1);
+        this.Books.splice(index, 1);
       }
-      return this.collection;
+      return this.Books;
     });
-    localStorage.setItem('collection', JSON.stringify(this.collection));
+    localStorage.setItem('Books', JSON.stringify(this.Books));
   }
 
   static getBooksFromStorage() {
-    if (localStorage.getItem('collection') === null) {
-      this.collection = [];
+    if (localStorage.getItem('Books') === null) {
+      this.Books = [];
     } else {
-      this.collection = JSON.parse(localStorage.getItem('collection'));
+      this.Books = JSON.parse(localStorage.getItem('Books'));
     }
-    return this.collection;
+    return this.Books;
   }
 }
 
@@ -43,7 +43,7 @@ function Book(title, author) {
 function UI() {}
 
 UI.prototype.addBookToUI = function (newBook) {
-  Storage.collection.forEach((book, index) => {
+  Storage.Books.forEach((book, index) => {
     if (book.title === newBook.title) {
       if (index % 2 === 0) {
         BookData.innerHTML += `
@@ -87,7 +87,7 @@ function addBook(e) {
 
   const newBook = new Book(title, author);
 
-  Storage.addCollection(newBook);
+  Storage.addBook(newBook);
 
   ui.addBookToUI(newBook);
   ui.clearInputs(titleInput, authorInput);
@@ -98,7 +98,7 @@ function addBook(e) {
 function removeBook(e) {
   if (e.target.className === 'remove remove-btn btn') {
     ui.removeBookFromUI(e.target);
-    Storage.removeFromCollection(e.target);
+    Storage.removeFromBooks(e.target);
   }
 }
 
