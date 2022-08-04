@@ -10,10 +10,6 @@ body {
   padding: 0;
 }
 
-ul {
-  list-style: none;
-}
-
 .index-header{
   display: flex;
   border: 2px solid;
@@ -28,12 +24,14 @@ ul {
 
 .index-header > ul{
   margin-right: 5px;
+  list-style: none;
 }
 
 
 .header-links{
   display: flex;
   gap: 10px;
+  list-style: none;
 }
 
 a{
@@ -113,18 +111,34 @@ a{
   margin-left: 255px;
 }
 
-.form, .contact-info-div{
-  visibility: hidden;
+.contact-info-div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.list-div{
+.contact-info-div > h3{
+  font-size: 2.5rem
+}
+
+.contact-info-div > p{
+}
+
+.contact-info-div > ul{ 
+  list-style: decimal;
+}
+
+.form, .contact-info-div, .list-div{
   display: none;
 }
 
+
+
 footer{
   display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid;
-  margin: 10px;
   width: 100%;
   position: fixed;
   bottom: 0;
