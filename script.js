@@ -47,7 +47,7 @@ UI.prototype.addBookToUI = function (newBook) {
     if (book.title === newBook.title) {
       if (index % 2 === 0) {
         BookData.innerHTML += `
-          <li class='book'>
+          <li class='book book-item'>
           <div class ='info'>
             <p class='book-title'>${newBook.title}</p>
             <p class='book-author'>&nbsp by ${newBook.author}</p>
@@ -57,7 +57,7 @@ UI.prototype.addBookToUI = function (newBook) {
         `;
       } else {
         BookData.innerHTML += `
-          <li class='book'>
+          <li class='book book-item'>
           <div class ='info'>
             <p class='book-title'>${newBook.title}</p>
             <p class='book-author'>&nbsp by ${newBook.author}</p>
@@ -108,3 +108,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const allBooks = Storage.getBooksFromStorage();
   allBooks.forEach((book) => ui.addBookToUI(book));
 });
+
+const addNew = document.querySelector('.add-new');
+const form = document.querySelector('.form');
+
+const list = document.querySelector('.list');
+const listDiv = document.querySelector('.list-div');
+
+const contact = document.querySelector('.contact');
+const contactDiv = document.querySelector('.contact-info-div');
+
+addNew.addEventListener('click', () => {
+  form.style.display = 'unset';
+  listDiv.style.display = 'none';
+  contactDiv.style.display = 'none';
+});
+
+list.addEventListener('click', () => {
+  form.style.display = 'none';
+  listDiv.style.display = 'unset';
+  contactDiv.style.display = 'none';
+});
+
+contact.addEventListener('click', () => {
+  form.style.display = 'none';
+  listDiv.style.display = 'none';
+  contactDiv.style.display = 'unset';
+});
+
+// eslint-disable-next-line no-unused-expressions
+window.onload;
+listDiv.style.display = 'unset';
