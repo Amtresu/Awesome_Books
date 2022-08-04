@@ -42,6 +42,7 @@ function Book(title, author) {
 
 function UI() {}
 
+
 UI.prototype.addBookToUI = function (newBook) {
   Storage.Books.forEach((book, index) => {
     if (book.title === newBook.title) {
@@ -143,9 +144,4 @@ contact.addEventListener('click', () => {
 
 window.onload
   listDiv.style.display = 'unset'
-
-
-
-
-
 
