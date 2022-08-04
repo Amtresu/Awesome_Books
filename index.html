@@ -10,16 +10,37 @@
         <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     </head>
     <body>
+        <header class="index-header">
+            <h1>Awesome Books</h1>
+            <ul class="header-links">
+                <a href="#"><li class="list">List</li></a>
+                <a href="#"><li class="add-new">Add new</li></a>
+                <a href="#"><li class="contact">Contact</li></a>
+            </ul>
+        </header>
+
+        <div class="list-div">
         <h1 class="">All Awesome Books</h1>
         <div class="books-container"><ul id="books" class="booksList"></Ul></div>
+        </div>    
+
         <form class="form" action="#">
             <ul>
                 <li><h3 class="">Add a new book</h3></li>
                 <li><input type="text" name="Title" id="title" placeholder="Title"></li>
                 <li><input type="text" name="Author" id="author" placeholder="Author"></li>
                 <li><input type="button" id="add-button" value="Add"></li>
+                <li class="message"></li>
             </ul>
         </form>
+
+        <div class="contact-info-div">
+            <p>contact info</p>
+        </div>
+
+        <footer>
+            <p>Copyright</p>
+        </footer>
         <script src="script.js" defer></script>
     </body>
 </html>

@@ -14,6 +14,32 @@ ul {
   list-style: none;
 }
 
+.index-header{
+  display: flex;
+  border: 2px solid;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.index-header > h1{
+  margin-left: 5px;
+}
+
+.index-header > ul{
+  margin-right: 5px;
+}
+
+
+.header-links{
+  display: flex;
+  gap: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
 .books-container{
   margin-left: 20%;
   margin-right: 20%;
@@ -85,6 +111,23 @@ ul {
   padding: 5px;
   margin-top: 10px;
   margin-left: 255px;
+}
+
+.form, .contact-info-div{
+  visibility: hidden;
+}
+
+.list-div{
+  display: none;
+}
+
+footer{
+  display: flex;
+  border: 2px solid;
+  margin: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 @media only screen and (max-width: 769px){
